@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>mau cari data kah manieesss??</h2>
+    <input type="text" id="search-input" placeholder="cari disini ajah">
+    <button id="search-submit">Kirim deh</button>
+    <div id="search-result"></div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-submit');
+        const searchResult = document.getElementById('search-result');
+
+        searchButton.addEventListener('click', () => {
+            const searchText = searchInput.value.trim();
+            
+            if (searchText === '') {
+                searchResult.innerHTML = 'gaada apa apa tuch';
+            } else {
+                searchResult.innerHTML = `cari ${searchText}? Bowleehh`;
+            }
+        });
+        </script>
+</body>
+</html>

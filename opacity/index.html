@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity Images</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="Japan.webp" id="img1" alt="Image 1">
+        <img src="Japan2.webp" id="img2" alt="Image 2">
+        <img src="pict 1.jpeg" id="img3" alt="Image 3">
+    </div>
+
+    <div class="slider-container">
+        <label for="slider1">Opacity for Image 1:</label>
+        <input type="range" id="slider1" min="0" max="100" value="100" oninput="changeOpacity('img1', this.value)">
+        
+        <label for="slider2">Opacity for Image 2:</label>
+        <input type="range" id="slider2" min="0" max="100" value="100" oninput="changeOpacity('img2', this.value)">
+        
+        <label for="slider3">Opacity for Image 3:</label>
+        <input type="range" id="slider3" min="0" max="100" value="100" oninput="changeOpacity('img3', this.value)">
+    </div>
+
+    <script>
+        
+function changeOpacity(imageId, opacityValue) {
+    var image = document.getElementById(imageId);
+    image.style.opacity = opacityValue / 100;
+}
+    </script>
+</body>
+</html>
